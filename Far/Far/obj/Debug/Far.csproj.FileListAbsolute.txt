@@ -1,0 +1,11 @@
+C:\Users\Admin\Source\Repos\Lab2\Far\Far\bin\Debug\Far.exe.config
+C:\Users\Admin\Source\Repos\Lab2\Far\Far\bin\Debug\Far.exe
+C:\Users\Admin\Source\Repos\Lab2\Far\Far\bin\Debug\Far.pdb
+C:\Users\Admin\Source\Repos\Lab2\Far\Far\obj\Debug\Far.exe
+C:\Users\Admin\Source\Repos\Lab2\Far\Far\obj\Debug\Far.pdb
+C:\Users\Admin\Source\Repos\Lab3\Far\Far\bin\Debug\Far.exe.config
+C:\Users\Admin\Source\Repos\Lab3\Far\Far\obj\Debug\Far.exe
+C:\Users\Admin\Source\Repos\Lab3\Far\Far\obj\Debug\Far.pdb
+C:\Users\Admin\Source\Repos\Lab32\Far\Far\bin\Debug\Far.exe.config
+C:\Users\Admin\Source\Repos\Lab32\Far\Far\obj\Debug\Far.exe
+C:\Users\Admin\Source\Repos\Lab32\Far\Far\obj\Debug\Far.pdb
