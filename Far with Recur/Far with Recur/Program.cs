@@ -22,7 +22,7 @@ namespace Far_with_recur
             this.dirs = directoryInfo;
         }
 
-        //метод
+        //метод, подсвечивабщий курсор
         public void PrintFolderInfo()
         {
             Console.Clear();// очищает все лишнее
