@@ -7,3 +7,6 @@ C:\Users\Admin\Source\Repos\Lab3\Far with Recur\Far with Recur\obj\Debug\Far wit
 C:\Users\Admin\Source\Repos\Lab32\Far with Recur\Far with Recur\bin\Debug\Far with Recur.exe.config
 C:\Users\Admin\Source\Repos\Lab32\Far with Recur\Far with Recur\obj\Debug\Far with Recur.exe
 C:\Users\Admin\Source\Repos\Lab32\Far with Recur\Far with Recur\obj\Debug\Far with Recur.pdb
+C:\Users\Admin\Source\Repos\Lab32\Far with Recur\Far with Recur\bin\Debug\Far with Recur.exe
+C:\Users\Admin\Source\Repos\Lab32\Far with Recur\Far with Recur\bin\Debug\Far with Recur.pdb
+C:\Users\Admin\Source\Repos\Lab32\Far with Recur\Far with Recur\obj\Debug\Far with Recur.csprojResolveAssemblyReference.cache
