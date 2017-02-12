@@ -11,7 +11,7 @@ namespace far2
     {
         static void Main(string[] args)
         {
-            string path = "D:";
+            string path = @"C:\Users\Admin\Source\Repos";
 
             string[] lastpath = new string[99];
 
@@ -57,6 +57,9 @@ namespace far2
                         if (index < items.Count - 1) index++;
                         break;
                     case ConsoleKey.Enter:
+
+                        FileSystemInfo active = items[index];
+
                         if (items[index].GetType() == typeof(DirectoryInfo)) // если i элемент папка
                         {
 
@@ -71,9 +74,21 @@ namespace far2
                             items.AddRange(dir.GetFiles());
                             index = 0; // положение курсора в новой папке 
                             last++; // новое положение 
+                        }
 
+                        else if (items[index].GetType() == typeof(FileInfo))
+                        {
+                            Console.Clear();
+                            FileStream fs = new FileStream(active.FullName, FileMode.Open, FileAccess.Read);
+                            StreamReader sr = new StreamReader(fs);
+
+                            Console.WriteLine(sr.ReadToEnd());
+
+                            sr.Close();
+                            fs.Close();
                         }
                         break;
+
                     case ConsoleKey.Escape:
                         if (indexOfLast != 0)
                         {

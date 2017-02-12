@@ -5,68 +5,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Far_with_recur
+namespace FarFiles
 {
     class CustomFolderInfo
     {
-        // поле
         CustomFolderInfo prev;
         int index;
-        DirectoryInfo[] dirs;
+        FileSystemInfo[] objs;
 
-        //конструктор, получающий три аргумента
-        public CustomFolderInfo(CustomFolderInfo prev, int index, DirectoryInfo[] directoryInfo)
+        public CustomFolderInfo(CustomFolderInfo prev, int index, FileSystemInfo[] list)
         {
             this.prev = prev;
             this.index = index;
-            this.dirs = directoryInfo;
+            this.objs = list;
         }
 
-        //метод, подсвечивабщий курсор
         public void PrintFolderInfo()
         {
-            Console.Clear();// очищает все лишнее
+            Console.Clear();
 
-            for (int i = 0; i < dirs.Length; ++i)
+            for (int i = 0; i < objs.Length; ++i)
             {
-                //если курсор совпадает с текущим индексом - подсвечивает зеленым
                 if (i == index)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                 }
-                else //все остальное белым
+                else
                 {
                     Console.ForegroundColor = ConsoleColor.White;
                 }
-                Console.WriteLine(dirs[i]);
+                Console.WriteLine(objs[i]);
             }
         }
 
-        //метод для уменьшения индекса при перемещении вверх
         public void DecreaseIndex()
         {
-            if (index - 1 >= 0) index--; // чтобы не уйти за массив
+            if (index - 1 >= 0) index--;
         }
 
-        //метод для увеличения индекса при перемещении вниз
         public void IncreaseIndex()
         {
-            if (index + 1 < dirs.Length) index++;
+            if (index + 1 < objs.Length) index++;
         }
 
-        //метод, отдающий новые данные
         public CustomFolderInfo GetNextItem()
         {
-            // return new CustomFolderInfo(this, 0, this.dirs[index].GetDirectories());
-            FileSystemInfo active = dirs[index];
+            FileSystemInfo active = objs[index];
 
             if (active.GetType() == typeof(DirectoryInfo))
             {
                 List<FileSystemInfo> list = new List<FileSystemInfo>();
+
                 DirectoryInfo d = (DirectoryInfo)active;
+
                 list.AddRange(d.GetDirectories());
                 list.AddRange(d.GetFiles());
-                CustomFolderInfo x = new CustomFolderInfo(this, 0, this.dirs[index].GetDirectories());
+
+                CustomFolderInfo x = new CustomFolderInfo(this, 0, list.ToArray());
                 return x;
             }
             else
@@ -84,20 +79,18 @@ namespace Far_with_recur
             return null;
         }
 
-        //метод, отдающий предыдущие данные
         public CustomFolderInfo GetPrevItem()
         {
             return prev;
         }
     }
+
     class Program
     {
-
         static void ShowFolderInfo(CustomFolderInfo item)
         {
             item.PrintFolderInfo();
 
-            //описывает нажатую клавишу с консоли
             ConsoleKeyInfo pressedKey = Console.ReadKey();
 
             if (pressedKey.Key == ConsoleKey.UpArrow)
@@ -124,12 +117,14 @@ namespace Far_with_recur
 
         static void Main(string[] args)
         {
-            /* создаем объект типа CustomFolderInfo класса и передаем свои параметры
-             * предыдущий пути нет
-             * передаем нулевой индекс
-             * привязываем путь и возвращаем массив объектов с подкаталогами в текущем каталоге
-            */
-            CustomFolderInfo test = new CustomFolderInfo(null, 0, new DirectoryInfo(@"C:\").GetDirectories());
+            // создаем вектор(массив)
+            List<FileSystemInfo> list = new List<FileSystemInfo>();
+
+            var d = new DirectoryInfo(@"C:\Users\Admin\Source\Repos");
+            list.AddRange(d.GetDirectories());
+            list.AddRange(d.GetFiles());
+
+            CustomFolderInfo test = new CustomFolderInfo(null, 0, list.ToArray());
             ShowFolderInfo(test);
         }
     }

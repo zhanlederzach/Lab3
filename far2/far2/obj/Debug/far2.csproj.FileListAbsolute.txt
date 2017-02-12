@@ -4,3 +4,9 @@ C:\Users\Admin\Source\Repos\Lab2\far2\far2\bin\Debug\far2.pdb
 C:\Users\Admin\Source\Repos\Lab2\far2\far2\obj\Debug\far2.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Source\Repos\Lab2\far2\far2\obj\Debug\far2.exe
 C:\Users\Admin\Source\Repos\Lab2\far2\far2\obj\Debug\far2.pdb
+C:\Users\Admin\Source\Repos\Lab32\far2\far2\bin\Debug\far2.exe.config
+C:\Users\Admin\Source\Repos\Lab32\far2\far2\obj\Debug\far2.exe
+C:\Users\Admin\Source\Repos\Lab32\far2\far2\obj\Debug\far2.pdb
+C:\Users\Admin\Source\Repos\Lab32\far2\far2\bin\Debug\far2.exe
+C:\Users\Admin\Source\Repos\Lab32\far2\far2\bin\Debug\far2.pdb
+C:\Users\Admin\Source\Repos\Lab32\far2\far2\obj\Debug\far2.csprojResolveAssemblyReference.cache
