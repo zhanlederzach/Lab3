@@ -82,12 +82,12 @@ namespace far2
                             FileStream fs = new FileStream(active.FullName, FileMode.Open, FileAccess.Read);
                             StreamReader sr = new StreamReader(fs);
 
-                            Console.WriteLine(sr.ReadToEnd());
+                            //Console.WriteLine(File.ReadAllText(active.FullName));
 
                             sr.Close();
                             fs.Close();
                         }
-                        break;
+                            break;
 
                     case ConsoleKey.Escape:
                         if (indexOfLast != 0)

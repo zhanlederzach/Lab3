@@ -7,3 +7,6 @@ C:\Users\Admin\Source\Repos\Lab3\FarFiles\FarFiles\obj\Debug\FarFiles.pdb
 C:\Users\Admin\Source\Repos\Lab32\FarFiles\FarFiles\bin\Debug\FarFiles.exe.config
 C:\Users\Admin\Source\Repos\Lab32\FarFiles\FarFiles\obj\Debug\FarFiles.exe
 C:\Users\Admin\Source\Repos\Lab32\FarFiles\FarFiles\obj\Debug\FarFiles.pdb
+C:\Users\Admin\Source\Repos\Lab32\FarFiles\FarFiles\bin\Debug\FarFiles.exe
+C:\Users\Admin\Source\Repos\Lab32\FarFiles\FarFiles\bin\Debug\FarFiles.pdb
+C:\Users\Admin\Source\Repos\Lab32\FarFiles\FarFiles\obj\Debug\FarFiles.csprojResolveAssemblyReference.cache

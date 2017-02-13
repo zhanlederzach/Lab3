@@ -69,14 +69,24 @@ namespace FarFiles
                 Console.Clear();
                 FileStream fs = new FileStream(active.FullName, FileMode.Open, FileAccess.Read);
                 StreamReader sr = new StreamReader(fs);
-
                 Console.WriteLine(sr.ReadToEnd());
+
+                // бесконечный цикл, выводит на экран содержимое до нажатия выхода
+                while (true)
+                {
+                    if (Console.ReadKey().Key.Equals(ConsoleKey.Escape))
+                        break;
+                    Console.Clear();
+                    Console.WriteLine(sr.ReadToEnd());
+                }
 
                 sr.Close();
                 fs.Close();
+
+                return this;
             }
 
-            return null;
+           return null;
         }
 
         public CustomFolderInfo GetPrevItem()
@@ -120,6 +130,7 @@ namespace FarFiles
             // создаем вектор(массив)
             List<FileSystemInfo> list = new List<FileSystemInfo>();
 
+            //прописываем путь
             var d = new DirectoryInfo(@"C:\Users\Admin\Source\Repos");
             list.AddRange(d.GetDirectories());
             list.AddRange(d.GetFiles());
